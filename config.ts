@@ -1,5 +1,5 @@
 const siteMetadata = {
-    title: `Elemental`,
+    title: `ProfitAlgo`,
     siteUrl: `http://localhost`,
     capitalizeTitleOnHome: false,
     logo: `/images/logo.png`,
@@ -8,15 +8,15 @@ const siteMetadata = {
     ogImage: `/images/wall.png`,
     twoColumnWall: true,
     cookiePolicy: true,
-    introTag: `PHOTOGRAPHER | VIDEOGRAPHER`,
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
+    introTag: `Risk Managed Exit Strategies for 200/- per month only.`,
+    description: `Helps in creating exit signals depending on dynamics of market and your holdings.`,
     about:
-        "Cras accumsan a lectus at tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus elementum dapibus dictum. Mauris auctor quam nec est tincidunt hendrerit. Donec pulvinar lobortis mauris. Cras vulputate ullamcorper ligula a rhoncus. Nunc venenatis elementum ligula in semper. Mauris malesuada purus nunc, et ultricies leo aliquam ac. Ut sit amet nunc id magna accumsan hendrerit in eget metus.",
-    author: `@_akzhy`,
+        "",
+    author: `Akhil`,
     blogItemsPerPage: 10,
     portfolioItemsPerPage: 10,
-    darkmode: true,
-    switchTheme: true,
+    darkmode: false,
+    switchTheme: false,
     navLinks: [
         {
             name: "HOME",
@@ -44,42 +44,28 @@ const siteMetadata = {
             name: "PRIVACY POLICY",
             url: "/privacy-policy",
         },
-        {
-            name: "GitHub",
-            url: "https://github.com/akzhy/gatsby-starter-elemental",
-        },
     ],
     social: [
         {
-            name: "Facebook",
-            icon: "/images/Facebook.svg",
-            url: "#",
-        },
-        {
             name: "Twitter",
             icon: "/images/Twitter.svg",
-            url: "#",
-        },
-        {
-            name: "Instagram",
-            icon: "/images/Instagram.svg",
-            url: "#",
+            url: "https://twitter.com/profit_algo",
         },
         {
             name: "Youtube",
             icon: "/images/Youtube.svg",
-            url: "#",
+            url: "https://www.youtube.com/channel/UCky4PYmu42tL_ynWN58__HQ",
         },
     ],
     contact: {
         // leave empty ('') or false to hide form
-        api_url: "https://getform.io/f/f227a36e-096a-4c6a-9963-9f1918a85bb3",
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
-        mail: "hi@akzhy.com",
-        phone: "000-000-0000",
-        address: "1234 \nLocation \nLocation",
+        api_url: '',
+        description: `If no means of communication is working. \n Then just ping by saying 👋 to the mail address provided below.`,
+        mail: "akhilgodvsdemon@gmail.com",
+        phone: "8919205072",
+        address: "Email is the only address we have.",
     },
-    disqus: "elemental-netlify-com",
+    disqus: "",
 }
 
 const beforeContactFormSubmit = data => {
