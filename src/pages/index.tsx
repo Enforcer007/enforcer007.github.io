@@ -96,7 +96,7 @@ const Wall = ({ data }) => {
             <p className="text-base lg:text-lg mt-4">{data.description}</p>
             <ScrollIntoView selector="#portfolio">
                 <Button
-                    title="SEE WORKS"
+                    title="STRATEGIES"
                     type="button"
                     iconRight={<ArrowRight />}
                 />
@@ -146,7 +146,7 @@ const Portfolio = ({ data }) => {
         <div className="boxed">
             <div className="px-4 py-20 text-center lg:py-40 lg:px-0">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
-                    PORTFOLIO
+                    STRATEGIES
                 </h2>
                 {/* <p className="mt-5 text-lg">{data}</p> */}
                 {data}

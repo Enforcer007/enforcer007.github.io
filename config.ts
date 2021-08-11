@@ -31,7 +31,7 @@ const siteMetadata = {
             url: "/blog",
         },
         {
-            name: "PORTFOLIO",
+            name: "STRATEGIES",
             url: "/portfolio",
         },
         {
@@ -62,8 +62,8 @@ const siteMetadata = {
         api_url: '',
         description: `If no means of communication is working. \n Then just ping by saying 👋 to the mail address provided below.`,
         mail: "akhilgodvsdemon@gmail.com",
-        phone: "8919205072",
-        address: "Email is the only address we have.",
+        phone: "",
+        address: "",
     },
     disqus: "",
 }
