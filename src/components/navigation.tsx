@@ -88,7 +88,7 @@ const Navbar: React.FC<NavbarProps> = ({ navPlaceholder, location, currentTheme,
                             }`}
                     />
 
-                    <h1 className="text-6xl relative lg:text-2xl text-color-2 focus:text-primary">
+                    <h1 className="text-2xl relative lg:text-xl text-color-2 focus:text-primary">
                         <span>Profit Algo</span>
                     </h1>
                 </Link>
