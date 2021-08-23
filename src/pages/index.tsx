@@ -40,7 +40,7 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
             <Wall data={siteData} />
             {siteData.about !== "" && <About data={siteData.about} />}
             <div className="px-4 lg:px-0" id="portfolio">
-                {portfolioList}
+                <Portfolio data={portfolioList} />
             </div>
             <Blog>{blogList}</Blog>
             <Contact data={siteData.contact} />
@@ -83,21 +83,20 @@ const Wall = ({ data }) => {
         <React.Fragment>
             <div className="title bg-bg">
                 <h1
-                    className={`text-6xl relative lg:text-7xl ${
-                        data.capitalizeTitleOnHome ? "uppercase" : ""
-                    }`}
+                    className={`text-6xl relative lg:text-7xl ${data.capitalizeTitleOnHome ? "uppercase" : ""
+                        }`}
                 >
                     <span {...spanAttrs}></span>
                     {data.title}
                 </h1>
             </div>
-            <p className="text-lg lg:text-xl text-color-2 pt-4 lg:pt-0">
+            <p className="text-lg lg:text-xl text-color-4 font-extrabold pt-4 lg:pt-0">
                 {data.introTag}
             </p>
             <p className="text-base lg:text-lg mt-4">{data.description}</p>
             <ScrollIntoView selector="#portfolio">
                 <Button
-                    title="SEE WORKS"
+                    title="STRATEGIES"
                     type="button"
                     iconRight={<ArrowRight />}
                 />
@@ -141,6 +140,22 @@ const Wall = ({ data }) => {
     )
 }
 
+const Portfolio = ({ data }) => {
+
+    return (
+        <div className="boxed">
+            <div className="px-4 py-20 text-center lg:py-40 lg:px-0">
+                <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
+                    STRATEGIES
+                </h2>
+                {/* <p className="mt-5 text-lg">{data}</p> */}
+                {data}
+            </div>
+        </div>
+    )
+}
+
+
 const About = ({ data }) => {
     return (
         <div className="boxed">
@@ -183,9 +198,8 @@ const Contact = ({ data }) => {
                     </div>
                 )}
                 <div
-                    className={`w-full ${
-                        hasContactForm ? "lg:w-1/2" : "lg:w-2/3 mx-auto"
-                    } px-6 pt-8`}
+                    className={`w-full ${hasContactForm ? "lg:w-1/2" : "lg:w-2/3 mx-auto"
+                        } px-6 pt-8`}
                 >
                     <ContactDescription data={data} />
                 </div>
@@ -195,80 +209,80 @@ const Contact = ({ data }) => {
 }
 
 export const query = graphql`
-    query IndexPageQuery {
-        site: site {
-            siteMetadata {
+            query IndexPageQuery {
+                site: site {
+                siteMetadata {
                 title
                 description
-                capitalizeTitleOnHome
-                titleImage
-                ogImage
-                twoColumnWall
-                introTag
-                description
-                about
-                contact {
-                    api_url
+            capitalizeTitleOnHome
+            titleImage
+            ogImage
+            twoColumnWall
+            introTag
+            description
+            about
+            contact {
+                api_url
                     description
-                    mail
-                    phone
-                    address
+            mail
+            phone
+            address
                 }
-                social {
-                    name
+            social {
+                name
                     url
-                    icon
+            icon
                 }
             }
         }
-        portfolio: allMdx(
-            filter: { fields: { sourceName: { eq: "portfolio" } } }
+            portfolio: allMdx(
+            filter: {fields: {sourceName: {eq: "portfolio" } } }
             limit: 6
-        ) {
-            edges {
+            ) {
+                edges {
                 node {
-                    id
+                id
                     frontmatter {
-                        title
+                title
                         description
-                        image {
-                            childImageSharp {
-                                fluid(maxWidth: 1000) {
-                                    ...GatsbyImageSharpFluid
-                                }
+            image {
+                childImageSharp {
+                fluid(maxWidth: 1000) {
+                ...GatsbyImageSharpFluid
+            }
                             }
                         }
                     }
-                    fields {
-                        slug
-                    }
+            fields {
+                slug
+            }
                 }
             }
         }
-        blog: allMdx(
-            filter: { fields: { sourceName: { eq: "blog" } } }
+            blog: allMdx(
+            filter: {fields: {sourceName: {eq: "blog" } } }
             limit: 6
-        ) {
-            edges {
+            ) {
+                edges {
                 node {
-                    id
+                id
                     frontmatter {
-                        title
+                title
                         description
-                        date(formatString: "DD MMMM YYYY")
-                        image {
-                            childImageSharp {
-                                fluid(maxWidth: 1000) {
-                                    ...GatsbyImageSharpFluid
-                                }
+            date(formatString: "DD MMMM YYYY")
+            image {
+                childImageSharp {
+                fluid(maxWidth: 1000) {
+                ...GatsbyImageSharpFluid
+            }
                             }
                         }
                     }
-                    fields {
-                        slug
-                    }
+            fields {
+                slug
+            }
                 }
             }
         }
     }
-`
+            `
